@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  hcounter = 0;
+  vcounter = 0;
+  $("#hform").click(function(){
+    $("p").append('<b style="border-style: ridge;"><span>Section'+ hcounter + '</b></span>');
+    hcounter++;
+  });
+
+  $("#vform").click(function(){
+    $("div").append('<br><label>Textbox #'+ vcounter + ' : </label>' +
+          '<input type="text" name="textbox' + vcounter + 
+          '" id="textbox' + vcounter + '" value="" >');
+          vcounter++;
+  });
+});
+
+</script>
+</head>
+<body style="text-align: center;">
+<h1>Retail Disputes Case Study</h1>
+
+<h3>Add Sections</h3>
+<p></p>
+
+<div>
+  <span>Form Elements</span>
+</div>
+
+<section style="margin: 10px;">
+<button id="hform">Append elements horizantally</button>
+<button id="vform">Append elements vertically</button>
+</section>
+</body>
+</html>
